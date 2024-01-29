@@ -13,7 +13,7 @@ function FormMarque() {
   const handleSubmit = (e) => {
       e.preventDefault();
 
-      axios.post('http://localhost:8080/insertMarque', { nom })
+      axios.post('https://carsback-production.up.railway.app/insertMarque', { nom })
           .then(response => {
               console.log('Marque insérée avec succès:', response.data);
               // Réinitialiser les champs du formulaire après l'insertion réussie
@@ -29,7 +29,7 @@ function FormMarque() {
   const [marques, setMarques] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/listMarque')
+    axios.get('https://carsback-production.up.railway.app/listMarque')
       .then(response => {
         setMarques(response.data);
       })

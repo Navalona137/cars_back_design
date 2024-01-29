@@ -9,7 +9,7 @@ function FormCaracteristique() {
   const [caracteristiques, setCaracteristiques] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/listCaracteristique')
+    axios.get('https://carsback-production.up.railway.app/listCaracteristique')
       .then(response => {
         setCaracteristiques(response.data);
       })

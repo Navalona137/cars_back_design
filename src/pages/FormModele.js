@@ -9,7 +9,7 @@ function FormModele() {
   const [modeles, setModeles] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/listModele')
+    axios.get('https://carsback-production.up.railway.app/listModele')
       .then(response => {
         setModeles(response.data);
         console.log('Modèles récupérés :', response.data);
