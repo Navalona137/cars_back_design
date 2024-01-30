@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Login from './pages/Login';
 import Inscription from './pages/Inscription';
 import HomeBack from './pages/HomeBack';
